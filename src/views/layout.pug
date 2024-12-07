@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title My Express Pug App
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .container
+      if Object.keys(flash).length
+        each type, message in flash
+          .flash(class=type)= message
+      block content
